@@ -1,0 +1,27 @@
+﻿@model string
+
+@{
+    ViewData["Title"] = "Convert question to Base64";
+}
+
+<div id="main-content">
+    <h2>Convert question to Base64</h2>
+
+    <form asp-controller="Incoming" method="post">
+        <fieldset>
+            <label for="question">Question</label>
+            <input type="text" class="form-control" name="question" id="question" required/>
+        </fieldset>
+        <br/>
+        <button type="submit" class="btn btn-primary">Convert to Base64</button>
+    </form>
+
+    <br/>
+    @if (!string.IsNullOrEmpty(Model))
+    {
+        <h3>Result:</h3>
+        <div id="base64-result">
+            @Model
+        </div>
+    }
+</div>
