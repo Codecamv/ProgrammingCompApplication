@@ -18,7 +18,8 @@
     "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final"
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
+    "ncalc": "1.3.8"
   },
 
   "commands": {
@@ -27,20 +28,13 @@
 
   "frameworks": {
     "dnx451": {
-      "dependencies": {
-      }
-    },
-    "dnxcore50": { }
+      "dependencies": { }
+    }
+    
   },
 
-  "exclude": [
-    "wwwroot",
-    "node_modules"
-  ],
-  "publishExclude": [
-    "**.user",
-    "**.vspscc"
-  ],
+  "exclude": [ "wwwroot", "node_modules" ],
+  "publishExclude": [ "**.user", "**.vspscc" ],
   "scripts": {
     "prepublish": [ "npm install", "bower install", "gulp clean", "gulp min" ]
   }
