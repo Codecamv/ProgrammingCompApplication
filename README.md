@@ -5,5 +5,5 @@
 - The version of signalR I am using is not available on nuget anymore.
 - To make this application compile you have to:
   - Copy folders inside "/MissingNugetPackages" from source
-  - Paste into your global nuget folder "..\Users\[YourUserFolder]\.dns\packages
+  - Paste into your global nuget folder "..\Users\[YourUserFolder]\.dnx\packages
   - Right click on "References" in the project and select "Restore packages"
