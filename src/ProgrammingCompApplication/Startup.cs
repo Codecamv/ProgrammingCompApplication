@@ -56,6 +56,7 @@ namespace ProgrammingCompApplication
                 {
                     if (context.Request.Path.HasValue && context.Request.Path.Value.Length > 2)
                     {
+                        context.Response.StatusCode = 200;
                         context.Request.QueryString = new QueryString("?question=" + context.Request.Path.Value.Substring(1));
                         context.Request.Path = "/Incoming/Question";
                         await next();
